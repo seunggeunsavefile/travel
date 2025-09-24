@@ -9,6 +9,6 @@ import java.util.List;
 @Mapper
 public interface TravelDAO {
 
-    @Select("SELECT no, district, title, description, address, phone, lat, lng FROM travel")
+    @Select("SELECT no, district, title, description, address, phone, lat, lng, imageUrl,extraImage FROM travel")
     List<TravelDTO> selectAll();
 }

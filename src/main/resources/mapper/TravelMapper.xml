@@ -6,7 +6,9 @@
 <mapper namespace="com.multi.travel.mapper.TravelMapper">
 
     <select id="findAll" resultType="com.multi.travel.dto.TravelDTO">
-        SELECT no, district, title, description, address, phone, lat AS lat, lng AS lng
+        SELECT no, district, title, description, address, phone,
+        lat AS lat, lng AS lng,
+        imageUrl, extraImage
         FROM travel
         <if test="query != null and query != ''">
             WHERE title LIKE CONCAT('%', #{query}, '%')
